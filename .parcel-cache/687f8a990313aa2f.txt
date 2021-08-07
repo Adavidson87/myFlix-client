@@ -1,4 +1,4 @@
-16222
+16236
 97C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uncss\node_modules\color-name132728325129070262 1
 93C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\lodash\fp\findLastFrom.js121436361000000000 0
 122C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\parse5\lib\extensions\location-info\tokenizer-mixin.js121436361000000000 0
@@ -28,7 +28,7 @@
 80C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\tough-cookie132728325008353267 1
 100C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\core-js\features\object\index.js121436361000000000 0
 134C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-modules-scope\node_modules\source-map\lib\binary-search.js131369414910000000 0
-67C:\Users\alexa\onedrive\documents\github\myflix-client\package.json132728348712162085 0
+67C:\Users\alexa\onedrive\documents\github\myflix-client\package.json132728362667786042 0
 85C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\nan\nan_private.h131637928500000000 0
 107C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\lib\config\files\plugins.js121012626000000000 0
 105C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\posthtml\node_modules\posthtml-parser132728325355165302 1
@@ -50,23 +50,15 @@
 92C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\parse5\lib\tree-adapters132728325538514705 1
 83C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\shebang-command132728324976109542 1
 79C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\array-equal132728325043090318 1
-72C:\Users\alexa\onedrive\documents\github\myflix-client\package-lock.json132728334472376919 0
+72C:\Users\alexa\onedrive\documents\github\myflix-client\package-lock.json132728362667696279 0
 87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\LICENSE121012626000000000 0
 111C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uncss\node_modules\postcss\lib\postcss.d.ts121436361000000000 0
 98C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\src\transformation132728325568554335 1
 80C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\lodash.clone132728324976997164 1
-83C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\nanoid.cmd132728325719316738 0
-100C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\core-js\stable\symbol\key-for.js121436361000000000 0
-87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\fastparse\README.md131853836480000000 0
-117C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-modules\node_modules\postcss\lib\input.js121436361000000000 0
-62C:\Users\alexa\onedrive\documents\github\myflix-client\.vscode132728316802159343 1
-138C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-modules\node_modules\postcss-modules-extract-imports\README.md121436361000000000 0
-110C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\static-extend\node_modules\define-property132728324947506083 1
-85C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\lodash\bindAll.js121436361000000000 0
-113C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\input-selection.js121436361000000000 0
-120C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uncss\node_modules\postcss-selector-parser\README.md121436361000000000 0
+122C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\source-map-support\node_modules\source-map\lib\util.js131509318790000000 0
+73C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\babel132728362665761475 1
 77C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\term-size132728325349011765 1
-67C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules132728324809754657 1
+67C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules132728362664724233 1
 113C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\css-tree\node_modules\source-map\package.json131511697190000000 0
 72C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\abab132728325156636506 1
 107C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\htmlparser2\lib\WritableStream.d.ts.map121436361000000000 0
@@ -85,7 +77,7 @@
 101C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\cssstyle\lib\properties\margin.js121436361000000000 0
 91C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\type-check\lib\index.js130958412080000000 0
 87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\base-x\src\index.js121436361000000000 0
-69C:\Users\alexa\onedrive\documents\github\myflix-client\src\index.html132728348019557695 0
+69C:\Users\alexa\onedrive\documents\github\myflix-client\src\index.html132728363421269948 0
 112C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\core-js\modules\es.string.from-code-point.js121436361000000000 0
 93C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\object-inspect\test\fn.js121436361000000000 0
 88C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\utils-merge\index.js131503392260000000 0
@@ -190,7 +182,7 @@
 95C:\Users\alexa\onedrive\documents\github\myflix-client\src\components\movie-card\movie-card.jsx132728310853895160 0
 87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\hsla-regex\index.js130671339940000000 0
 101C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uri-js\dist\esnext\schemes\wss.js121436361000000000 0
-72C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin132728325719366598 1
+72C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin132728362666100568 1
 105C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\core-js\stable\symbol\has-instance.js121436361000000000 0
 90C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\node-forge\lib\prng.js121436361000000000 0
 117C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\http-live-streaming.js121436361000000000 0
@@ -210,7 +202,7 @@
 87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\split2\node_modules132728324809814498 1
 94C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\json-schema\draft-01\links129340000440000000 0
 131C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@parcel\package-manager\test\fixtures\packages\foo-2.0\index.js121436361000000000 0
-86C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.package-lock.json132728334472915477 0
+86C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.package-lock.json132728362668184980 0
 90C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\lodash\fp\assocPath.js121436361000000000 0
 152C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@parcel\node-resolver-core\node_modules\braces\node_modules\extend-shallow\README.md130800381770000000 0
 93C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@swc\helpers\lib\index.js121436361000000000 0
@@ -3287,6 +3279,7 @@
 92C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\svgo\lib\svgo\plugins.js121436361000000000 0
 91C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\htmlnano\lib\helpers.js121436361000000000 0
 110C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\performance-now\lib\performance-now.js.map131319881250000000 0
+86C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\babel\package.json131315006580000000 0
 104C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\utility-types\dist\mapped-types.d.ts121436361000000000 0
 102C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\utility-types\dist\mapped-types.js121436361000000000 0
 140C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\expand-brackets\node_modules\is-accessor-descriptor\node_modules\kind-of132728324949630389 1
@@ -3701,6 +3694,15 @@
 88C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\strip-ansi\readme.md121436361000000000 0
 136C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-modules-extract-imports\node_modules\source-map\CHANGELOG.md131369414900000000 0
 139C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uncss\node_modules\postcss-selector-parser\postcss-selector-parser.d.ts121436361000000000 0
+83C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\nanoid.cmd132728325719316738 0
+100C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\core-js\stable\symbol\key-for.js121436361000000000 0
+87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\fastparse\README.md131853836480000000 0
+117C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-modules\node_modules\postcss\lib\input.js121436361000000000 0
+138C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-modules\node_modules\postcss-modules-extract-imports\README.md121436361000000000 0
+110C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\static-extend\node_modules\define-property132728324947506083 1
+85C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\lodash\bindAll.js121436361000000000 0
+113C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\input-selection.js121436361000000000 0
+120C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uncss\node_modules\postcss-selector-parser\README.md121436361000000000 0
 91C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\cssnano-utils\README.md121436361000000000 0
 124C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uncss\node_modules\postcss-selector-parser\dist\index.js121436361000000000 0
 125C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\uncss\node_modules\postcss-selector-parser\dist\parser.js121436361000000000 0
@@ -4930,7 +4932,6 @@
 116C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-modules\node_modules\postcss\lib\node.js121436361000000000 0
 111C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\core-js\stable\string\virtual\trim-start.js121436361000000000 0
 129C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\source-map-support\node_modules\source-map\lib\source-node.js131509962680000000 0
-122C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\source-map-support\node_modules\source-map\lib\util.js131509318790000000 0
 99C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\source-map-resolve\changelog.md121436361000000000 0
 100C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\request-promise-native\README.md121436361000000000 0
 106C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\source-map\lib\source-map-generator.js131411568470000000 0
@@ -5782,6 +5783,7 @@
 87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\react-dom\README.md121436361000000000 0
 87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\react-dom\server.js121436361000000000 0
 88C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\lodash\_baseMerge.js121436361000000000 0
+83C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel-node132728362666100568 0
 114C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2018\AbstractEqualityComparison.js121436361000000000 0
 124C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\react-dom\umd\react-dom-server.browser.production.min.js121436361000000000 0
 97C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\http-signature\.dir-locals.el131480975920000000 0
@@ -6372,6 +6374,7 @@
 86C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\parse-asn1\asn1.js121436361000000000 0
 94C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-normalize-url\dist132728324913646676 1
 101C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-normalize-url\LICENSE-MIT121436361000000000 0
+82C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\babel\index.js131247659690000000 0
 102C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\postcss-normalize-url\package.json121436361000000000 0
 119C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\htmlnano\lib\modules\collapseAttributeWhitespace.js121436361000000000 0
 115C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2020\GetPrototypeFromConstructor.js121436361000000000 0
@@ -12023,7 +12026,6 @@
 101C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2018\SameValueZero.js121436361000000000 0
 99C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2018\SecFromTime.js121436361000000000 0
 91C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2018\Set.js121436361000000000 0
-74C:\Users\alexa\onedrive\documents\github\myflix-client\.vscode\launch.json132728316802159343 0
 99C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\regions\SI.js121436361000000000 0
 105C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2018\SetFunctionLength.js121436361000000000 0
 112C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2018\StrictEqualityComparison.js121436361000000000 0
@@ -12123,6 +12125,7 @@
 96C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2017\MakeDate.js121436361000000000 0
 99C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2017\MinFromTime.js121436361000000000 0
 94C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2017\modulo.js121436361000000000 0
+77C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\babel\lib132728362665781431 1
 101C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\es-abstract\2017\MonthFromTime.js121436361000000000 0
 96C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@types\node\fs\promises.d.ts132726852820000000 0
 99C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\regions\MQ.js121436361000000000 0
@@ -14711,6 +14714,7 @@
 114C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\css-unicode-bidi.js121436361000000000 0
 113C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\css-unset-value.js121436361000000000 0
 107C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\css3-attr.js121436361000000000 0
+95C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel-external-helpers132728362666110534 0
 112C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\css3-boxsizing.js121436361000000000 0
 109C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\css3-colors.js121436361000000000 0
 115C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\caniuse-lite\data\features\css3-cursors-grab.js121436361000000000 0
@@ -14996,6 +15000,7 @@
 83C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\braces\index.js121436361000000000 0
 78C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\braces\lib132728325319012034 1
 89C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\braces\lib\compile.js121436361000000000 0
+99C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel-external-helpers.ps1132728362666110534 0
 91C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\braces\lib\constants.js121436361000000000 0
 88C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\braces\lib\expand.js121436361000000000 0
 87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\braces\lib\parse.js121436361000000000 0
@@ -15048,6 +15053,9 @@
 93C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\balanced-match\LICENSE.md121436361000000000 0
 95C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\balanced-match\package.json121436361000000000 0
 102C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\balanced-match\.github\FUNDING.yml121436361000000000 0
+84C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\babel\.npmignore131247659690000000 0
+83C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\babel\README.md131247659690000000 0
+84C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\babel\lib\cli.js131315004950000000 0
 80C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\aws4\aws4.js121436361000000000 0
 80C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\aws4\LICENSE121436361000000000 0
 85C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\aws4\package.json121436361000000000 0
@@ -15775,6 +15783,7 @@
 91C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@parcel\fs\package.json121436361000000000 0
 120C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\types\lib\retrievers\getBindingIdentifiers.js121012626000000000 0
 94C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@parcel\fs\src\MemoryFS.js121436361000000000 0
+87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel-node.cmd132728362666110534 0
 91C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@parcel\fs\lib\index.js121436361000000000 0
 94C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@parcel\fs\lib\MemoryFS.js121436361000000000 0
 95C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@parcel\fs\lib\OverlayFS.js121436361000000000 0
@@ -16144,6 +16153,7 @@
 109C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\node_modules\json5\LICENSE.md121436361000000000 0
 111C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\node_modules\json5\package.json121436361000000000 0
 111C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\node_modules\json5\lib\index.js121436361000000000 0
+82C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel.cmd132728362666110534 0
 111C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\node_modules\json5\lib\parse.js121436361000000000 0
 115C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\node_modules\json5\lib\unicode.d.ts121436361000000000 0
 110C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\@babel\core\node_modules\json5\lib\util.js121436361000000000 0
@@ -16186,6 +16196,10 @@
 80C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\astring132728325719286822 0
 77C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\atob132728325719286822 0
 81C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\atob.cmd132728325719286822 0
+78C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel132728362666110534 0
+99C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel-external-helpers.cmd132728362666110534 0
+87C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel-node.ps1132728362666100568 0
+82C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\babel.ps1132728362666110534 0
 89C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\browserslist.ps1132728325719286822 0
 79C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\cssesc132728325719296798 0
 83C:\Users\alexa\onedrive\documents\github\myflix-client\node_modules\.bin\cssesc.cmd132728325719296798 0
