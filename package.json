@@ -545,8 +545,5 @@
   "bugs": {
     "url": "https://github.com/Adavidson87/myFlix-client/issues"
   },
-  "homepage": "https://github.com/Adavidson87/myFlix-client#readme",
-  "devDependencies": {
-    "sass": "^1.37.5"
-  }
+  "homepage": "https://github.com/Adavidson87/myFlix-client#readme"
 }
