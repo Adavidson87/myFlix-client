@@ -399,6 +399,7 @@
     "prelude-ls": "^1.1.2",
     "process": "^0.11.10",
     "process-nextick-args": "^2.0.1",
+    "prop-types": "^15.7.2",
     "psl": "^1.8.0",
     "public-encrypt": "^4.0.3",
     "punycode": "^1.4.1",
