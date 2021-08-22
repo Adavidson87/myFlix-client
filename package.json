@@ -2,7 +2,6 @@
   "name": "myflix-client",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.html",
   "dependencies": {
     "abab": "^2.0.5",
     "abortcontroller-polyfill": "^1.7.3",
@@ -550,6 +549,6 @@
   },
   "homepage": "https://github.com/Adavidson87/myFlix-client#readme",
   "devDependencies": {
-    "sass": "^1.37.5"
+    "@parcel/transformer-sass": "^2.0.0-rc.0"
   }
 }
