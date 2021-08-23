@@ -20,19 +20,17 @@ class MainView extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://peaceful-forest-99574.herokuapp.com/https://myflix-cryptic-waters.herokuapp.com/movies')
-      .then(response => {
-        this.setState({
-          movies: response.data
-        });
-      })
-      .catch(error => {
-        console.log(error);
+    let accessToken = localStorage.getItem('token');
+    if (accessToken !== null) {
+      this.setState({
+        user: localStorage.getItem('user')
       });
+      this.getMovies(accessToken);
+    }
   }
 
   getMovies(token) {
-    axios.get('https://myflix-cryptic-waters.herokuapp.com/movies', {
+    axios.get('myflix-cryptic-waters.herokuapp.com/movies', {
       headers: { Authorization: 'Bearer ${token}' }
     })
       .then(response => {
