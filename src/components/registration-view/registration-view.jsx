@@ -26,7 +26,7 @@ export function RegistrationView(props) {
 
         <Form.Group controlId="formPassword">
           <Form.Label>Password:</Form.Label>
-          <Form.Control type="password" onChange={e => setPasswrod(e.target.value)} />
+          <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
         </Form.Group>
 
         <Form.Group controlId="formEmail">
