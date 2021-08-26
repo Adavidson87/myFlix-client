@@ -1,5 +1,3 @@
-
-// myFlix-client/src/main-view/main-view.jsx
 import React from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
@@ -27,6 +25,7 @@ export class MainView extends React.Component {
 
   componentDidMount() {
     let accessToken = localStorage.getItem('token');
+
     if (accessToken !== null) {
       this.setState({
         user: localStorage.getItem('user')
@@ -36,6 +35,7 @@ export class MainView extends React.Component {
   }
 
   getMovies(token) {
+    console.log("get movies")
     axios.get('https://myflix-cryptic-waters.herokuapp.com/movies', {
       headers: { Authorization: `Bearer ${token}` }
     })
