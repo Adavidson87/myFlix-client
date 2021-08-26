@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 export class MovieCard extends React.Component {
   render() {
-    const { movie, onMovieClick } = this.props;
+    const { movie } = this.props;
     return (
       <Col md="4">
         <Card bg="primary" text="white">
@@ -14,7 +14,7 @@ export class MovieCard extends React.Component {
           <Card.Body>
             <Card.Title>{movie.Title}</Card.Title>
             <Card.Text>{movie.Description}</Card.Text>
-            <Button onClick={() => onMovieClick(movie)} variant="link" border="info">Open</Button>
+            <Button variant="link" border="info">Open</Button>
           </Card.Body>
         </Card>
       </Col >
@@ -25,6 +25,5 @@ export class MovieCard extends React.Component {
 MovieCard.propTypes = {
   movie: PropTypes.shape({
     Title: PropTypes.string
-  }).isRequired,
-  onMovieClick: PropTypes.func.isRequired
+  }).isRequired
 };

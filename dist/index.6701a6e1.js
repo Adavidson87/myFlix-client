@@ -23057,7 +23057,7 @@ class MainView extends _reactDefault.default.Component {
     }
     getMovies(token) {
         console.log("get movies");
-        _axiosDefault.default.get('https://myflix-cryptic-waters.herokuapp.com/movies', {
+        _axiosDefault.default.get('https://peaceful-forest-99574.herokuapp.com/https://myflix-cryptic-waters.herokuapp.com/movies', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -28539,7 +28539,7 @@ var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 class MovieCard extends _reactDefault.default.Component {
     render() {
-        const { movie , onMovieClick  } = this.props;
+        const { movie  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
             md: "4",
             __source: {
@@ -28589,8 +28589,6 @@ class MovieCard extends _reactDefault.default.Component {
                                 children: movie.Description
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                                onClick: ()=>onMovieClick(movie)
-                                ,
                                 variant: "link",
                                 border: "info",
                                 __source: {
@@ -28610,8 +28608,7 @@ class MovieCard extends _reactDefault.default.Component {
 MovieCard.propTypes = {
     movie: _propTypesDefault.default.shape({
         Title: _propTypesDefault.default.string
-    }).isRequired,
-    onMovieClick: _propTypesDefault.default.func.isRequired
+    }).isRequired
 };
 
   $parcel$ReactRefreshHelpers$4249.postlude(module);
