@@ -19,6 +19,8 @@ export class MainView extends React.Component {
     // Initial state is set to null
     this.state = {
       movies: [],
+      directors: [],
+      genres: [],
       user: null
     };
   }
@@ -34,15 +36,60 @@ export class MainView extends React.Component {
     }
   }
 
+  getUsers(token) {
+    console.log("get users")
+    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        this.setState({
+          users: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   getMovies(token) {
     console.log("get movies")
-    axios.get('https://peaceful-forest-99574.herokuapp.com/https://myflix-cryptic-waters.herokuapp.com/movies', {
+    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/movies', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
         // Assign the result to the state
         this.setState({
           movies: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  getDirectors(token) {
+    console.log("get directors")
+    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/directors', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(respons => {
+        this.setState({
+          directors: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  getGenres(token) {
+    console.lgo("get genres")
+    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/genres', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        this.setState({
+          genres: response.data
         });
       })
       .catch(function (error) {
@@ -67,7 +114,9 @@ export class MainView extends React.Component {
     const { movies, user } = this.state;
     return (
       <Router>
+
         <Row className="main-view justify-content-md-center">
+
           <Route exact path="/" render={() => {
             if (!user) return <Col>
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
@@ -79,6 +128,7 @@ export class MainView extends React.Component {
               </Col>
             ))
           }} />
+
           <Route path="/register" render={() => {
             if (user) return <Redirect to="/" />
             return <Col>
@@ -117,6 +167,13 @@ export class MainView extends React.Component {
             </Col>
           }
           } />
+
+          <Route path="/users/:username" render={({ match, history }) => {
+            if (!user) return <LoginView onLoggedIn={(data) => this.onLoggedIn(data)} />;
+            if (movies.length === 0) return;
+            return <ProfileView history={history} movies={movies} />
+
+          }} />
         </Row>
       </Router>
     );

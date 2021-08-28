@@ -14,6 +14,22 @@ export class GenreView extends React.Component {
     document.removeEventListener('keypress', this.keypressCallback);
   }
 
+  getGenres(token) {
+    console.log("get genres")
+    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/genres', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        // Assign the result to the state
+        this.setState({
+          genres: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   render() {
     const { genre, onBackClick } = this.props;
 
@@ -43,3 +59,5 @@ GenreView.propTypes = {
     Description: PropTypes.string.isRequired
   })
 }
+
+export default GenreView;

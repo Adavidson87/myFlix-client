@@ -51,7 +51,9 @@ DirectorView.propTypes = {
   director: PropTypes.shape({
     Name: PropTypes.string.isRequired,
     Bio: PropTypes.string.isRequired,
-    Birth: PropTypes.array.isRequired,
-    Death: PropTypes.array.isRequired
+    Birth: PropTypes.string.isRequired,
+    Death: PropTypes.string.isRequired
   })
 }
+
+export default DirectorView;
