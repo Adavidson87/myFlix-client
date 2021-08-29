@@ -22,7 +22,7 @@ export class MovieView extends React.Component {
     const username = localStorage.getItem('user');
 
     axios.post(`https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users/${username}/movies/${this.props.movie._id}`, {}, {
-      headers: { Authorization: 'Bearer ${token}' }
+      headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
         alert('Added to Favorites')
@@ -87,4 +87,6 @@ MovieView.propTypes = {
     Director: PropTypes.string.isRequired,
     Genre: PropTypes.string.isRequired
   })
-}
+};
+
+export default MovieView;

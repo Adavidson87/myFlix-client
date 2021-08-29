@@ -58,6 +58,6 @@ GenreView.propTypes = {
     Name: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired
   })
-}
+};
 
 export default GenreView;

@@ -54,6 +54,6 @@ DirectorView.propTypes = {
     Birth: PropTypes.string.isRequired,
     Death: PropTypes.string.isRequired
   })
-}
+};
 
 export default DirectorView;

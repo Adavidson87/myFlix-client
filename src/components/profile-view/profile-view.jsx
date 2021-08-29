@@ -65,7 +65,6 @@ export class ProfileView extends React.Component {
       .catch(function (error) {
         console.log(error);
       })
-    // .then(() => window.location.reload());
   }
 
   handleUpdate(e, newUsername, newPassword, newEmail, newBirthdate) {
@@ -149,7 +148,7 @@ export class ProfileView extends React.Component {
   }
 
   render() {
-    const { FavoriteMovies, validated } = this.state;
+    const { FavoriteMovies } = this.state;
     const { movies } = this.props;
 
     return (
@@ -159,22 +158,20 @@ export class ProfileView extends React.Component {
           <Card.Body>
             {FavoriteMovies.length === 0 && <div className="text-center">Empty.</div>}
 
-            <div className="favorites-movies">
+            <div className="favorite-movies">
               {FavoriteMovies.length > 0 &&
                 movies.map((movie) => {
                   if (movie._id === FavoriteMovies.find((favoriteMovie) => favoriteMovie === movie._id)) {
                     return (
-                      <CardDeck className="movie-card-deck">
-                        <Card className="favorites-item card-content" key={movie._id}>
-                          <Card.Img className="movieCard" variant="top" src={movie.ImageURL} />
-                          <Card.Body>
-                            <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
-                            <Button value={movie._id} onClick={(e) => this.removeFavouriteMovie(e, movie)}>
-                              Remove
-                            </Button>
-                          </Card.Body>
-                        </Card>
-                      </CardDeck>
+                      <Card className="favorite-items-card-content" key={movie._id}>
+                        <Card.Img className="movieCard" variant="top" src={movie.ImageURL} />
+                        <Card.Body>
+                          <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
+                          <Button value={movie._id} onClick={(e) => this.removeFavouriteMovie(e, movie)}>
+                            Remove
+                          </Button>
+                        </Card.Body>
+                      </Card>
                     );
                   }
                 })}
@@ -187,22 +184,22 @@ export class ProfileView extends React.Component {
 
               <Form.Group controlId="formUsername">
                 <Form.Label className="form-label">Username:</Form.Label>
-                <Form.Control type="text" placeholder="Change Username" onChange={(e) => this.setUsername(e.target.value)} />
+                <Form.Control type="text" placeholder="Enter New Username" onChange={(e) => this.setUsername(e.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formPassword">
                 <Form.Label className="form-label">Password:</Form.Label>
-                <Form.Control type="password" placeholder="New Password" onChange={(e) => this.setPassword(e.target.value)} />
+                <Form.Control type="password" placeholder="Enter New Password" onChange={(e) => this.setPassword(e.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formEmail">
                 <Form.Label className="form-label">Email:</Form.Label>
-                <Form.Control type="email" placeholder="Change Email" onChange={(e) => this.setEmail(e.target.value)} />
+                <Form.Control type="email" placeholder="Enter New Email" onChange={(e) => this.setEmail(e.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formBirthday">
                 <Form.Label className="form-label">Birthday:</Form.Label>
-                <Form.Control type="date" placeholder="Change Birthdate" onChange={(e) => this.setBirthdate(e.target.value)} />
+                <Form.Control type="date" placeholder="Enter New Birthdate" onChange={(e) => this.setBirthdate(e.target.value)} />
               </Form.Group>
 
               <Button type="submit">Update</Button>
@@ -232,3 +229,5 @@ ProfileView.propTypes = {
     Birthdate: PropTypes.string,
   }),
 };
+
+export default ProfileView;
