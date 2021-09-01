@@ -1,22 +1,20 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap';
-import Card from 'react-bootstrap';
-import Form from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap';
 
 export class ProfileView extends React.Component {
   constructor() {
     super();
-
     this.state = {
       Username: null,
       Password: null,
       Email: null,
-      Birthdate: null,
-      FavoriteMovies: [],
-      validated: null,
+      Birthday: null,
+      FavoriteMovies: []
     };
   }
 
@@ -39,7 +37,7 @@ export class ProfileView extends React.Component {
           Username: response.data.Username,
           Password: response.data.Password,
           Email: response.data.Email,
-          Birthdate: response.data.Birthdate,
+          Birthday: response.data.Birthday,
           FavoriteMovies: response.data.FavoriteMovies,
         });
       })
@@ -49,17 +47,16 @@ export class ProfileView extends React.Component {
   }
 
 
-  removeFavouriteMovie() {
+  removeFavoriteMovie() {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
 
 
-    axios
-      .delete(`https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users/${username}/movies/${movie._id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+    axios.delete(`https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users/${username}/movies/${movie._id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
       .then(() => {
-        console.log('Movie was deleted');
+        console.log('Movie was removed from list');
         this.componentDidMount();
       })
       .catch(function (error) {
@@ -156,7 +153,7 @@ export class ProfileView extends React.Component {
         <Card className="profile-card">
           <h2>Favorites Movies</h2>
           <Card.Body>
-            {FavoriteMovies.length === 0 && <div className="text-center">Empty.</div>}
+            {FavoriteMovies.length === 0 && <div className="text-center">Empty</div>}
 
             <div className="favorite-movies">
               {FavoriteMovies.length > 0 &&
@@ -218,15 +215,10 @@ export class ProfileView extends React.Component {
 
 ProfileView.propTypes = {
   user: PropTypes.shape({
-    FavoriteMovies: PropTypes.arrayOf(
-      PropTypes.shape({
-        _id: PropTypes.string.isRequired,
-        Title: PropTypes.string.isRequired,
-      })
-    ),
     Username: PropTypes.string.isRequired,
     Email: PropTypes.string.isRequired,
     Birthdate: PropTypes.string,
+    FavoriteMovies: PropTypes.array
   }),
 };
 

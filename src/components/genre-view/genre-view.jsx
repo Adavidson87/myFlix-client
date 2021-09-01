@@ -15,14 +15,14 @@ export class GenreView extends React.Component {
   }
 
   getGenres(token) {
-    console.log("get genres")
-    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/genres', {
+    console.lgo("get genres")
+    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/genres/', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
-        // Assign the result to the state
         this.setState({
-          genres: response.data
+          Name: response.data.Name,
+          Description: response.data.Description
         });
       })
       .catch(function (error) {
@@ -31,19 +31,21 @@ export class GenreView extends React.Component {
   }
 
   render() {
-    const { genre, onBackClick } = this.props;
+    const { genre, movie, onBackClick } = this.props;
 
     return (
       <div className="genre-view">
 
         <div className="genre-name">
-          <span className="label">Name: </span>
-          <span className="value">{genre.Name}</span>
+          <span className="label">Name: {genre.Name}</span>
         </div>
 
         <div className="genre-discription">
-          <span className="label">Description: </span>
-          <span className="value">{genre.Description}</span>
+          <span className="label">Description: {genre.Description}</span>
+        </div>
+
+        <div className="genre-id">
+          <span className="label">Genre ID: {genre._id}</span>
         </div>
 
         <button onClick={() => { onBackClick(null); }}>Back</button>
@@ -56,7 +58,8 @@ export class GenreView extends React.Component {
 GenreView.propTypes = {
   genre: PropTypes.shape({
     Name: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired
+    Description: PropTypes.string.isRequired,
+    Id: PropTypes.string
   })
 };
 

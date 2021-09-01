@@ -14,30 +14,46 @@ export class DirectorView extends React.Component {
     document.removeEventListener('keypress', this.keypressCallback);
   }
 
+  getDirectors(token) {
+    console.log("get directors")
+    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/directors/', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        this.setState({
+          director: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+
   render() {
-    const { director, onBackClick } = this.props;
+    const { movie, director, onBackClick } = this.props;
 
     return (
       <div className="director-view">
 
         <div className="director-name">
-          <span className="label">Name: </span>
-          <span className="value">{director.Name}</span>
+          <span className="label">Name: {director.Name}</span>
         </div>
 
         <div className="director-bio">
-          <span className="label">Bio: </span>
-          <span className="value">{director.Bio}</span>
+          <span className="label">Bio: {director.Bio}</span>
         </div>
 
         <div className="director-birth">
-          <span className="label">Birthday: </span>
-          <span className="value">{director.Birth}</span>
+          <span className="label">Birthday: {director.Birth}</span>
         </div>
 
         <div className="director-death">
-          <span className="label">Died: </span>
-          <span className="value">{director.Death}</span>
+          <span className="label">Died: {director.Beath}</span>
+        </div>
+
+        <div className="director-id">
+          <span className="label">Director ID: {director._id}</span>
         </div>
 
         <button onClick={() => { onBackClick(null); }}>Back</button>
@@ -49,10 +65,10 @@ export class DirectorView extends React.Component {
 
 DirectorView.propTypes = {
   director: PropTypes.shape({
-    Name: PropTypes.string.isRequired,
-    Bio: PropTypes.string.isRequired,
-    Birth: PropTypes.string.isRequired,
-    Death: PropTypes.string.isRequired
+    Name: PropTypes.string,
+    Bio: PropTypes.string,
+    Birth: PropTypes.instanceOf(Date),
+    Death: PropTypes.instanceOf(Date)
   })
 };
 

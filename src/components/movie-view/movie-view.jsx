@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { generatePath } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 export class MovieView extends React.Component {
@@ -33,15 +32,15 @@ export class MovieView extends React.Component {
   };
 
   render() {
-    const { movie, onBackClick } = this.props;
+    const { movie, genre, onBackClick } = this.props;
 
 
 
     return (
-      <div className="movie-view">
+      <div className="movie-view" >
 
         <div className="movie-poster">
-          <img src={movie.ImagePath} />
+          <img src={movie.ImagePath} crossOrigin="anonymous" />
         </div>
 
         <div className="movie-title">
@@ -56,18 +55,20 @@ export class MovieView extends React.Component {
 
         <div className="movie-genre">
           <span className="label">Genre: </span>
-          <span className="value">{movie.Genre}</span>
           <Link to={`/genres/${movie.Genre}`}>
-            <button variant="link">Open</button>
+            <button variant="link">{movie.Genre}</button>
           </Link>
         </div>
 
         <div className="movie-director">
-          <span className="label">Director: </span>
-          <span className="value">{movie.Director}</span>
+          <span className="label" >Director: </span>
           <Link to={`/directors/${movie.Director}`}>
-            <button variant="link">Open</button>
+            <button variant="link">{movie.Director}</button>
           </Link>
+        </div>
+
+        <div className="movie-id">
+          <span className="label">Movie ID: {movie._id}</span>
         </div>
 
         <button className="favorite-button" value={movie._id} onClick={(e) => this.addFavorite(e, movie)}>Add to Favorites</button>

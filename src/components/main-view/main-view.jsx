@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
@@ -9,7 +8,7 @@ import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { RegistrationView } from '../registration-view/registration-view';
-import { ProfileView } from '../profile-view/profile-view';
+// import { ProfileView } from '../profile-view/profile-view';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -40,13 +39,14 @@ export class MainView extends React.Component {
 
   getUsers(token) {
     console.log("get users")
-    axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users', {
+    axios.post('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
         this.setState({
           users: response.data
         });
+        console.log(response)
       })
       .catch(function (error) {
         console.log(error);
@@ -74,7 +74,7 @@ export class MainView extends React.Component {
     axios.get('https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/directors/', {
       headers: { Authorization: `Bearer ${token}` }
     })
-      .then(respons => {
+      .then(response => {
         this.setState({
           directors: response.data
         });
@@ -113,7 +113,7 @@ export class MainView extends React.Component {
   }
 
   render() {
-    const { movies, user, username } = this.state;
+    const { movies, directors, genres, user, username } = this.state;
     return (
       <Router>
 
@@ -164,7 +164,7 @@ export class MainView extends React.Component {
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} onBackClick={() => history.goBack()} />
+              <DirectorView director={movies.find(m => m.Director === match.params.Name).Director} onBackClick={() => history.goBack()} />
             </Col>
           }
           } />
@@ -175,7 +175,7 @@ export class MainView extends React.Component {
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
+              <GenreView genre={movies.find(m => m.Genre === match.params.Name).Genre} onBackClick={() => history.goBack()} />
             </Col>
           }
           } />
