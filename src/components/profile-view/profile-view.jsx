@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import { Link } from "react-router-dom";
 
 export class ProfileView extends React.Component {
   constructor() {
@@ -29,7 +30,7 @@ export class ProfileView extends React.Component {
   // get user method
   getUser(token) {
     const username = localStorage.getItem('user');
-    axios.get(`https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+    axios.get(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => {
@@ -52,7 +53,7 @@ export class ProfileView extends React.Component {
     const username = localStorage.getItem('user');
 
 
-    axios.delete(`https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users/${username}/movies/${movie._id}`, {
+    axios.delete(`https://myflix-cryptic-waters.herokuapp.com/users/${username}/movies/${movie._id}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(() => {
@@ -83,7 +84,7 @@ export class ProfileView extends React.Component {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
 
-    axios.put(`https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+    axios.put(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
       data: {
         Username: newUsername ? newUsername : this.state.Username,
@@ -130,7 +131,7 @@ export class ProfileView extends React.Component {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
 
-    axios.delete(`https://peaceful-forest-99574.herokuapp.com/myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+    axios.delete(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(() => {
@@ -153,17 +154,17 @@ export class ProfileView extends React.Component {
         <Card className="profile-card">
           <h2>Favorites Movies</h2>
           <Card.Body>
-            {FavoriteMovies.length === 0 && <div className="text-center">Empty</div>}
+            {/* {FavoriteMovies.length === 0 && <div className="text-center">Empty</div>} */}
 
             <div className="favorite-movies">
               {FavoriteMovies.length > 0 &&
                 movies.map((movie) => {
-                  if (movie._id === FavoriteMovies.find((favoriteMovie) => favoriteMovie === movie._id)) {
+                  if (FavoriteMovies.includes(movie._id)) {
                     return (
                       <Card className="favorite-items-card-content" key={movie._id}>
-                        <Card.Img className="movieCard" variant="top" src={movie.ImageURL} />
+                        <Card.Img className="movieCard" variant="top" src={movie.ImagePath} crossOrigin="anonymous" />
                         <Card.Body>
-                          <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
+                          <Card.Title className="movie-card-title"><Link to={`/movies/${movie._id}`}><Button variant="link">{movie.Title}</Button></Link></Card.Title>
                           <Button value={movie._id} onClick={(e) => this.removeFavouriteMovie(e, movie)}>
                             Remove
                           </Button>
@@ -206,6 +207,9 @@ export class ProfileView extends React.Component {
                 <Button onClick={(e) => this.handleDeleteUser(e)}>Delete User</Button>
               </Card.Body>
             </Form>
+
+            <Button onClick={() => { onBackClick(null); }}>Back</Button>
+
           </Card.Body>
         </Card>
       </Row >

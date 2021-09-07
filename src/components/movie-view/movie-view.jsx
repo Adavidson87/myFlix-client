@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 export class MovieView extends React.Component {
 
@@ -32,7 +33,7 @@ export class MovieView extends React.Component {
   };
 
   render() {
-    const { movie, genre, onBackClick } = this.props;
+    const { movie, onBackClick } = this.props;
 
 
 
@@ -56,24 +57,20 @@ export class MovieView extends React.Component {
         <div className="movie-genre">
           <span className="label">Genre: </span>
           <Link to={`/genres/${movie.Genre}`}>
-            <button variant="link">{movie.Genre}</button>
+            <Button variant="link">{movie.Genre}</Button>
           </Link>
         </div>
 
         <div className="movie-director">
           <span className="label" >Director: </span>
           <Link to={`/directors/${movie.Director}`}>
-            <button variant="link">{movie.Director}</button>
+            <Button variant="link">{movie.Director}</Button>
           </Link>
         </div>
 
-        <div className="movie-id">
-          <span className="label">Movie ID: {movie._id}</span>
-        </div>
+        <Button className="favorite-button" value={movie._id} onClick={(e) => this.addFavorite(e, movie)}>Add to Favorites</Button>
 
-        <button className="favorite-button" value={movie._id} onClick={(e) => this.addFavorite(e, movie)}>Add to Favorites</button>
-
-        <button onClick={() => { onBackClick(null); }}>Back</button>
+        <Button onClick={() => { onBackClick(null); }}>Back</Button>
 
       </div>
     );
