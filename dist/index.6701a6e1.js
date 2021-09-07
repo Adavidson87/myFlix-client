@@ -23223,12 +23223,12 @@ class MainView extends _reactDefault.default.Component {
                         __self: this
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/directors/:name",
+                        path: "/directors/:Name",
                         render: ({ match , history  })=>{
                             return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
                                 md: 8,
                                 children: /*#__PURE__*/ _jsxRuntime.jsx(_directorView.DirectorView, {
-                                    director: directors.find((m)=>m.Name === match.params.name
+                                    director: directors.find((m)=>m.Name === match.params.Name
                                     ),
                                     onBackClick: ()=>history.goBack()
                                 })
@@ -23255,20 +23255,6 @@ class MainView extends _reactDefault.default.Component {
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
                             lineNumber: 146
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/users/:username",
-                        render: ({ match , history  })=>{
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_profileView.ProfileView, {
-                                history: history,
-                                movies: movies
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 153
                         },
                         __self: this
                     })
@@ -29176,7 +29162,7 @@ DirectorView.propTypes = {
     director: _propTypesDefault.default.shape({
         Name: _propTypesDefault.default.string.isRequired,
         Bio: _propTypesDefault.default.string.isRequired,
-        Birthdate: _propTypesDefault.default.string.isRequired,
+        Birth: _propTypesDefault.default.string.isRequired,
         Death: _propTypesDefault.default.string
     })
 };

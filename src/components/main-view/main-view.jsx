@@ -136,9 +136,9 @@ export class MainView extends React.Component {
             </Col>
           }} />
 
-          <Route path="/directors/:name" render={({ match, history }) => {
+          <Route path="/directors/:Name" render={({ match, history }) => {
             return <Col md={8}>
-              <DirectorView director={directors.find(m => m.Name === match.params.name)} onBackClick={() => history.goBack()} />
+              <DirectorView director={directors.find(m => m.Name === match.params.Name)} onBackClick={() => history.goBack()} />
             </Col>
           }
           } />
@@ -149,11 +149,6 @@ export class MainView extends React.Component {
             </Col>
           }
           } />
-
-          <Route path="/users/:username" render={({ match, history }) => {
-            return <ProfileView history={history} movies={movies} />
-
-          }} />
         </Row>
       </Router>
     );
