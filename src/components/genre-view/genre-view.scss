@@ -1,7 +1,16 @@
-.label {
-  color: yellowgreen
+.genre-view {
+  text-align: center;
+  border-style: solid;
+  border-color: yellowgreen;
 }
 
-.value {
-  color: whitesmoke;
+.genre-name-label {
+  text-align: center;
+  color: yellowgreen;
+  font-size: 24px;
 }
+
+.genre-discription-label {
+  color: whitesmoke
+}
+

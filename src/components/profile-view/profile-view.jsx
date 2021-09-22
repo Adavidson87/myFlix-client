@@ -11,8 +11,8 @@ import { setUser } from '../../actions/actions';
 
 import './profile-view.scss'
 
-
 export class ProfileView extends React.Component {
+
   constructor() {
     super();
     this.state = {
@@ -24,26 +24,30 @@ export class ProfileView extends React.Component {
     };
   }
 
-  componentDidMount() {
-    const accessToken = localStorage.getItem('token');
-    if (accessToken !== null) {
-      this.getUser(accessToken);
-    }
-  }
-
-
-  // get user method
   getUser(token) {
     const username = localStorage.getItem('user');
     axios.get(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
-      .then(response => {
-        this.props.setUser(response.data);
+      .then((response) => {
+        this.setState({
+          Username: response.data.Username,
+          Password: response.data.Password,
+          Email: response.data.Email,
+          Birthday: response.data.Birthday,
+          FavoriteMovies: response.data.FavoriteMovies,
+        });
       })
       .catch(function (error) {
         console.log(error);
       });
+  }
+
+  componentDidMount() {
+    const accessToken = localStorage.getItem('token');
+    if (accessToken !== null) {
+      this.getUser(accessToken);
+    }
   }
 
   // removes movie from favorites list
@@ -79,7 +83,7 @@ export class ProfileView extends React.Component {
       },
     })
       .then((response) => {
-        const data = response.data;
+        setUser(response.data);
         console.log(data);
         alert(user + " has been updated.");
         console.log(response);
@@ -130,10 +134,10 @@ export class ProfileView extends React.Component {
 
   render() {
     const { FavoriteMovies } = this.state;
-    const { movies } = this.props;
+    const { movies, user } = this.props;
 
     return (
-      <Row className="profile-view">
+      < Row className="profile-view" >
         <Card bg="yellowgreen" className="profile-card" variant="top">
           <h1>Favorites Movies</h1>
           <Card.Body className="profile-cardBody">
@@ -201,12 +205,12 @@ ProfileView.propTypes = {
     Username: PropTypes.string.isRequired,
     Email: PropTypes.string.isRequired,
     Birthdate: PropTypes.string,
-    FavoriteMovies: PropTypes.array
+    favoriteMovies: PropTypes.array
   }),
 };
 
 let mapStateToProps = state => {
-  return { user: state.user }
-}
+  return { user: state.user, movies: state.movies }
+};
 
 export default connect(mapStateToProps, { setUser })(ProfileView);

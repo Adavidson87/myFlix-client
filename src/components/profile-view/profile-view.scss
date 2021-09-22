@@ -11,7 +11,11 @@
   background-color: transparent !important;
   border-style: solid;
   border-color: yellowgreen !important;
-  border-radius: 50px !important
+  border-radius: 50px !important;
+}
+
+.profile-cardBody {
+  border-width: 1px;
 }
 
 .update-form { 
@@ -44,7 +48,7 @@
 h1, h2, h3 {
   text-align: center;
   background-color: yellowgreen;
-  // border-radius: 50px;
+  color: #2b2b2b !important;
 }
 
 h1 {

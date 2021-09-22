@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
+import './director-view.scss';
 
 export class DirectorView extends React.Component {
 
@@ -11,11 +12,11 @@ export class DirectorView extends React.Component {
       <div className="director-view">
 
         <div className="director-name">
-          <span className="value">Name: {director.Name}</span>
+          <span className="label">{director.Name}</span>
         </div>
 
         <div className="director-bio">
-          <span className="value">Bio: {director.Bio}</span>
+          <span className="value">{director.Bio}</span>
         </div>
 
         <div className="director-birthdate">

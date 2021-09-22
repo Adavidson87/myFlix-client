@@ -12,8 +12,8 @@ export function setFilter(value) {
   return { type: SET_FILTER, value };
 }
 
-export function setUser(value) {
-  return { type: SET_USER, value };
+export function setUser(user) {
+  return { type: SET_USER, user };
 }
 
 export function setDirectors(value) {

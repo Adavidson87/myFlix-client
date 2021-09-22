@@ -21,17 +21,11 @@ import './main-view.scss';
 
 class MainView extends React.Component {
 
-  constructor() {
-    super();
-  }
-
   getMovies(token) {
-    console.log("get movies")
     axios.get('https://myflix-cryptic-waters.herokuapp.com/movies', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
-        // Assign the result to the state
         this.props.setMovies(response.data);
       })
       .catch(function (error) {
@@ -39,8 +33,21 @@ class MainView extends React.Component {
       });
   }
 
+  getUser(token) {
+    const username = localStorage.getItem('user');
+    axios.get(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then(response => {
+        this.props.setUser(response.data);
+        // console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   getDirectors(token) {
-    console.log("get directors")
     axios.get('https://myflix-cryptic-waters.herokuapp.com/directors', {
       headers: { Authorization: `Bearer ${token}` }
     })
@@ -53,7 +60,6 @@ class MainView extends React.Component {
   }
 
   getGenres(token) {
-    console.log("get genres")
     axios.get('https://myflix-cryptic-waters.herokuapp.com/genres', {
       headers: { Authorization: `Bearer ${token}` }
     })
@@ -67,12 +73,13 @@ class MainView extends React.Component {
 
   componentDidMount() {
     let accessToken = localStorage.getItem('token');
-    let username = localStorage.getItem('user');
+    let user = localStorage.getItem('user');
 
     if (accessToken !== null) {
       this.setState({
         user: localStorage.getItem('user')
       });
+      this.getUser(accessToken);
       this.getMovies(accessToken);
       this.getGenres(accessToken);
       this.getDirectors(accessToken);
@@ -87,6 +94,7 @@ class MainView extends React.Component {
     localStorage.setItem('token', authData.token);
     localStorage.setItem('user', authData.user.Username);
     this.getMovies(authData.token);
+    this.getUser(authData.token);
   }
 
   render() {
@@ -96,7 +104,7 @@ class MainView extends React.Component {
     return (
       <Router>
 
-        <Row className="main-view-justify-content-md-center">
+        <Row className="main-view justify-content-md-center flex-wrap">
 
           <NavBar user={user} />
 

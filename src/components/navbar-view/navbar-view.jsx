@@ -10,22 +10,23 @@ export class NavBar extends React.Component {
 
 
   onLoggedOut = () => {
-    this.props.setUser(null);
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     window.open('/', '_self');
-    console.log('logged out');
+    this.setState({
+      user: null,
+      token: null
+    });
   }
 
   render() {
-    // const { user } = this.state
     const { username, user } = this.props;
 
     return (
 
       < Navbar fixed="top" className="navBar">
         <Nav className="justify-content-center" activeKey="/home">
-          <Nav.Link>Greetings {`${this.props.user}`}</Nav.Link>
+          <Nav.Link className="link-text">Hello {`${this.props.user.Username}`}</Nav.Link>
           <Nav.Link as={Link} to={'/'} className="link-text">Home</Nav.Link>
           <Nav.Link as={Link} to={'/profile'} className="link-text">View Profile</Nav.Link>
           <Button variant="secondary" onClick={() => { this.onLoggedOut() }}>Logout</Button>
