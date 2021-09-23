@@ -56,7 +56,6 @@ body {
 .director-view {
   text-align: center !important;
   margin-top: 15%;
-  margin-left: 50%;
 }
 
 .label {
@@ -103,6 +102,7 @@ body {
   border-style: solid;
   border-color: yellowgreen !important;
   border-radius: 50px !important;
+  text-align: center;
 }
 
 .profile-cardBody {
@@ -184,7 +184,7 @@ h1 {
 }
 .visibility-filter-class {
   background-color: transparent;
-  margin-top: 15%;
+  margin-top: 100px;
 }
 .visibility-filter-class {
   background-color: #2b2b2b;

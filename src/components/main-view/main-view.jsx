@@ -11,8 +11,10 @@ import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { RegistrationView } from '../registration-view/registration-view';
-import { ProfileView } from '../profile-view/profile-view';
+import ProfileView from '../profile-view/profile-view';
 import { NavBar } from '../navbar-view/navbar-view';
+import config from '../../config.js';
+
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -21,8 +23,15 @@ import './main-view.scss';
 
 class MainView extends React.Component {
 
+  constructor() {
+    super();
+    this.state = {
+      user: null
+    }
+  }
+
   getMovies(token) {
-    axios.get('https://myflix-cryptic-waters.herokuapp.com/movies', {
+    axios.get(`${config.API_URL}/movies`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
@@ -35,7 +44,7 @@ class MainView extends React.Component {
 
   getUser(token) {
     const username = localStorage.getItem('user');
-    axios.get(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+    axios.get(`${config.API_URL}/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(response => {
@@ -48,7 +57,7 @@ class MainView extends React.Component {
   }
 
   getDirectors(token) {
-    axios.get('https://myflix-cryptic-waters.herokuapp.com/directors', {
+    axios.get(`${config.API_URL}/directors`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
@@ -60,7 +69,7 @@ class MainView extends React.Component {
   }
 
   getGenres(token) {
-    axios.get('https://myflix-cryptic-waters.herokuapp.com/genres', {
+    axios.get(`${config.API_URL}/genres`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
@@ -98,8 +107,8 @@ class MainView extends React.Component {
   }
 
   render() {
-    let { movies, genres, directors, user } = this.props;
-    // const { user } = this.state;
+    let { movies, genres, directors } = this.props;
+    const { user } = this.state;
 
     return (
       <Router>
@@ -114,7 +123,7 @@ class MainView extends React.Component {
                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
               </Col>
             if (movies.length === 0) return <div className="main-view" />;
-            return <MoviesList movies={movies} />;
+            return <MoviesList />;
           }} />
 
           <Route path="/register" render={() => {
@@ -134,7 +143,7 @@ class MainView extends React.Component {
               </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return <Col>
-              <ProfileView movies={movies} />
+              <ProfileView />
             </Col>
           }} />
 

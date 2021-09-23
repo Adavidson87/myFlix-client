@@ -7,8 +7,8 @@ import { MovieCard } from '../movie-card/movie-card';
 import './movies-list.scss'
 
 const mapStateToProps = state => {
-  const { visibilityFilter } = state;
-  return { visibilityFilter };
+  const { visibilityFilter, movies } = state;
+  return { visibilityFilter, movies };
 };
 
 function MoviesList(props) {

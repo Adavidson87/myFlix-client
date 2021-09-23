@@ -8,10 +8,11 @@ import Row from 'react-bootstrap/Row';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { setUser } from '../../actions/actions';
+import config from '../../config.js';
 
 import './profile-view.scss'
 
-export class ProfileView extends React.Component {
+class ProfileView extends React.Component {
 
   constructor() {
     super();
@@ -26,7 +27,7 @@ export class ProfileView extends React.Component {
 
   getUser(token) {
     const username = localStorage.getItem('user');
-    axios.get(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+    axios.get(`${config.API_URL}/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => {
@@ -56,7 +57,7 @@ export class ProfileView extends React.Component {
     const Username = localStorage.getItem('user');
 
 
-    axios.delete(`https://myflix-cryptic-waters.herokuapp.com/users/${Username}/movies/${movie._id}`, {
+    axios.delete(`${config.API_URL}/users/${Username}/movies/${movie._id}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(() => {
@@ -70,10 +71,10 @@ export class ProfileView extends React.Component {
 
   //updates user information
   handleSubmit(e) {
-    let token = localStorage.getItem("token");
-    let username = localStorage.getItem("user");
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('user');
 
-    axios.put(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+    axios.put(`${config.API_URL}/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
       data: {
         Username: this.state.Username,
@@ -94,20 +95,20 @@ export class ProfileView extends React.Component {
       });
   }
 
-  setUsername(input) {
-    this.Username = input;
-  }
-
-  setPassword(input) {
-    this.Password = input;
-  }
-
-  setEmail(input) {
-    this.Email = input;
-  }
-
-  setBirthday(input) {
-    this.Birthday = input;
+  onChangeHandler = (e) => {
+    console.log(e);
+    if (e.target.name === "username") {
+      this.Username = e.target.Username
+    }
+    if (e.target.password === "password") {
+      this.Password = e.target.Password
+    }
+    if (e.target.email === "emal") {
+      this.email = e.target.Email
+    }
+    if (e.target.Birthday === "birthday") {
+      this.birthday = e.target.Birthday
+    }
   }
 
 
@@ -118,7 +119,7 @@ export class ProfileView extends React.Component {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
 
-    axios.delete(`https://myflix-cryptic-waters.herokuapp.com/users/${username}`, {
+    axios.delete(`${config.API_URL}/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(() => {
@@ -167,23 +168,23 @@ export class ProfileView extends React.Component {
 
               <Form.Group controlId="formUsername">
                 <Form.Label className="form-label">Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter New Username" onChange={(e) => this.setUsername(e.target.value)} />
+                <Form.Control type="text" placeholder="Enter New Username" name='username' onChange={this.onChangeHandler} />
               </Form.Group>
 
 
               <Form.Group controlId="formPassword">
                 <Form.Label className="form-label">Password:</Form.Label>
-                <Form.Control type="password" placeholder="Enter New Password" onChange={(e) => this.setPassword(e.target.value)} />
+                <Form.Control type="password" placeholder="Enter New Password" name="password" onChange={this.onChangeHandler} />
               </Form.Group>
 
               <Form.Group controlId="formEmail">
                 <Form.Label className="form-label">Email:</Form.Label>
-                <Form.Control type="email" placeholder="Enter New Email" onChange={(e) => this.setEmail(e.target.value)} />
+                <Form.Control type="email" placeholder="Enter New Email" name="email" onChange={this.onChangeHandler} />
               </Form.Group>
 
               <Form.Group controlId="formBirthday">
                 <Form.Label className="form-label">Birthday:</Form.Label>
-                <Form.Control type="date" placeholder="Enter New Birthday" onChange={(e) => this.setBirthday(e.target.value)} />
+                <Form.Control type="date" placeholder="Enter New Birthday" name="birthday" onChange={this.onChangeHandler} />
               </Form.Group>
             </Form>
           </Card.Body>

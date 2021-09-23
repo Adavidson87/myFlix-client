@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import config from '../../config.js';
+
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState("");
@@ -19,7 +21,7 @@ export function RegistrationView(props) {
     e.preventDefault();
     const isValid = formValidation();
     if (isValid) {
-      axios.post('https://myflix-cryptic-waters.herokuapp.com/users', {
+      axios.post(`${config.API_URL}/users`, {
         Username: username,
         Password: password,
         Email: email,

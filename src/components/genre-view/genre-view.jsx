@@ -12,11 +12,11 @@ export class GenreView extends React.Component {
       <div className="genre-view">
 
         <div className="genre-name">
-          <span className="label">Name: {genre.Name}</span>
+          <span className="label">{genre.Name}</span>
         </div>
 
         <div className="genre-discription">
-          <span className="label">Description: {genre.Description}</span>
+          <span className="label">{genre.Description}</span>
         </div>
 
         <Button onClick={() => { onBackClick(null); }}>Back</Button>

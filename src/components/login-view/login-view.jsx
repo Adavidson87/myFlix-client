@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import axios from 'axios';
+import config from '../../config.js';
 
 export function LoginView(props) {
   const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ export function LoginView(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     /* Send a request to the server for authentication */
-    axios.post('https://myflix-cryptic-waters.herokuapp.com/login', {
+    axios.post(`${config.API_URL}/login`, {
       Username: username,
       Password: password
     })

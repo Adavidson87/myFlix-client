@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import config from '../../config.js';
+
 
 import './movie-view.scss';
 
@@ -24,7 +26,7 @@ export class MovieView extends React.Component {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
 
-    axios.post(`https://myflix-cryptic-waters.herokuapp.com/users/${username}/movies/${this.props.movie._id}`, {}, {
+    axios.post(`${config.API_URL}/users/${username}/movies/${this.props.movie._id}`, {}, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
