@@ -29454,11 +29454,11 @@ class ProfileView extends _reactDefault.default.Component {
             console.log(response);
             window.open('{`/users/${this.props.user}`}', '_self');
         }).catch(function(error) {
+            console.log(response.data);
             alert(error.response.data);
         });
     }
     onChangeHandler = (e)=>{
-        console.log(e);
         if (e.target.name === "username") this.Username = e.target.Username;
         if (e.target.password === "password") this.Password = e.target.Password;
         if (e.target.email === "emal") this.email = e.target.Email;
@@ -34812,9 +34812,7 @@ function movies(state = [], action) {
             return state;
     }
 }
-function user(state = {
-    favoriteMovies: []
-}, action) {
+function user(state = [], action) {
     switch(action.type){
         case _actions.SET_USER:
             return action.user;

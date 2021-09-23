@@ -91,12 +91,12 @@ class ProfileView extends React.Component {
         window.open('{`/users/${this.props.user}`}', '_self');
       })
       .catch(function (error) {
+        console.log(response.data);
         alert(error.response.data);
       });
   }
 
   onChangeHandler = (e) => {
-    console.log(e);
     if (e.target.name === "username") {
       this.Username = e.target.Username
     }
