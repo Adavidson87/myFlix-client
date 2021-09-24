@@ -84,14 +84,13 @@ class ProfileView extends React.Component {
       },
     })
       .then((response) => {
-        setUser(response.data);
+        const data = response.data;
         console.log(data);
         alert(user + " has been updated.");
         console.log(response);
-        window.open('{`/users/${this.props.user}`}', '_self');
+        // window.open('{`/users/${this.props.user}`}', '_self');
       })
       .catch(function (error) {
-        console.log(response.data);
         alert(error.response.data);
       });
   }

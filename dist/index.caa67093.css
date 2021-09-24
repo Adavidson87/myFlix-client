@@ -12,20 +12,14 @@ body {
   background-color: #2b2b2b;
 }
 .movie-view {
-  margin-top: 25%;
+  display: inline-block;
+  margin-top: 100px;
   text-align: center;
-  width: 300px;
-  margin-left: 50%;
 }
 
 .movie-poster {
   text-align: center;
-  border-style: solid;
-  border-color: yellowgreen;
   padding: 10px;
-  border-width: 1px;
-  border-radius: 25px;
-  background-color: yellowgreen;
 }
 
 .label {
@@ -53,6 +47,10 @@ body {
   border-radius: 50px;
   padding: 10px;
 }
+
+.card {
+  background-color: #2b2b2b !important;
+}
 .director-view {
   text-align: center !important;
   margin-top: 15%;
@@ -75,17 +73,16 @@ body {
 }
 .genre-view {
   text-align: center;
-  border-style: solid;
-  border-color: yellowgreen;
+  margin-top: 100px;
 }
 
-.genre-name-label {
+.label {
   text-align: center;
   color: yellowgreen;
   font-size: 24px;
 }
 
-.genre-discription-label {
+.value {
   color: whitesmoke;
 }
 .profile-view {
@@ -184,13 +181,13 @@ h1 {
 }
 .visibility-filter-class {
   background-color: transparent;
-  margin-top: 100px;
 }
 .visibility-filter-class {
   background-color: #2b2b2b;
-  display: inline-flexbox;
-  max-width: 700px;
-  margin: 0 auto;
+  display: inline-flex;
+  max-width: 500px;
+  margin-top: 50px;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=index.caa67093.css.map */

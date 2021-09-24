@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import { LoginView } from '../login-view/login-view'
+
 
 import './navbar-view.scss';
 
@@ -22,17 +25,21 @@ export class NavBar extends React.Component {
   render() {
     const { username, user } = this.props;
 
-    return (
+    if (!user)
+      return null;
+    else {
+      return (
 
-      < Navbar fixed="top" className="navBar">
-        <Nav className="justify-content-center" activeKey="/home">
-          {/* <Nav.Link className="link-text">Hello {`${this.props.user.Username}`}</Nav.Link> */}
-          <Nav.Link as={Link} to={'/'} className="link-text">Home</Nav.Link>
-          <Nav.Link as={Link} to={'/profile'} className="link-text">View Profile</Nav.Link>
-          <Button variant="secondary" onClick={() => { this.onLoggedOut() }}>Logout</Button>
-        </Nav>
-      </Navbar >
-    );
+        < Navbar fixed="top" className="navBar">
+          <Nav className="justify-content-center" activeKey="/home">
+            <Nav.Link className="link-text">Hello {`${this.props.user}`}</Nav.Link>
+            <Nav.Link as={Link} to={'/'} className="link-text">Home</Nav.Link>
+            <Nav.Link as={Link} to={'/profile'} className="link-text">View Profile</Nav.Link>
+            <Button variant="secondary" onClick={() => { this.onLoggedOut() }}>Logout</Button>
+          </Nav>
+        </Navbar >
+      );
+    }
   }
 }
 

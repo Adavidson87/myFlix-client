@@ -106,6 +106,7 @@ class MainView extends React.Component {
     this.getUser(authData.token);
   }
 
+
   render() {
     let { movies, genres, directors } = this.props;
     const { user } = this.state;
@@ -124,6 +125,7 @@ class MainView extends React.Component {
               </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return <MoviesList />;
+
           }} />
 
           <Route path="/register" render={() => {
